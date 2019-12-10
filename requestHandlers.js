@@ -1,10 +1,20 @@
-function start(){
+var exec = require('child_process').exec;
 
-    console.log("Handle start.");
+function start(response){
+
+    //console.log("Handle start.");
+    exec("ls -lah", function(error, stdout, stderr){
+        response.writeHead(200,  {'Content-type': 'text/plain'});
+        response.write(stdout);
+        response.end();
+    });
 }
 
-function upload(){
-    console.log("Handle upload.")
+function upload(response){
+    //console.log("Handle upload.")
+        response.writeHead(200,  {'Content-type': 'text/plain'});
+        response.write("Handle upload!");
+        response.end();
 }
 
 exports.start = start;
