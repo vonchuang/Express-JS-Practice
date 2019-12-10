@@ -1,9 +1,22 @@
 var express = require('express');
+var http = require('http');
+
 var app = express();
+var server = http.Server(app);
+var io = require('socket.io')(server);
+
 app.get('/', function(req, res){
-    res.send('Hello');
+    res.sendFile(__dirname + '/views/index.html');
 })
 
-app.listen(8888, function(){
+io.on('connection', function(socket){
+    console.log('Hey~');
+
+    socket.on('disconnect', function(){
+        console.log('Bye~');
+    })
+})
+
+server.listen(8888, function(){
     console.log('port:8000~');
 })
