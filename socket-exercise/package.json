@@ -1,0 +1,23 @@
+{
+  "name": "socket-exercise",
+  "version": "1.0.0",
+  "description": "socket-exercise",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/github.com/vonchuang/Express-JS-Practice/socket-exercise.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/github.com/vonchuang/Express-JS-Practice/socket-exercise/issues"
+  },
+  "homepage": "https://gitlab.com/github.com/vonchuang/Express-JS-Practice/socket-exercise#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  }
+}
